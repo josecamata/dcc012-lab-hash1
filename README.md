@@ -15,18 +15,21 @@ tabela e números de colisões.
 ## O que deve ser feito? 
 
 Uma estrutura básica para a implementação da tabela hash já foi fornecida: 
- - Os arquivos [hash.h](siga/include/hash.h) e [hash.cc](siga/src/hash.cc) .
+ - Os arquivos [hash.h](hash/include/hash.h) e [hash.cc](hash/src/hash.cc) .
 
 1. Implementar um tipo abstrato de dados hash com encadeamento separado, com as seguintes rotinas implementadas:
- - create(m, hash): Cria uma tabela de tamanho m que usa a função hash
- - insert(key,data): Insere data com chave key na tabela. A função deve retornar um ponteiro para o elemento inserido. Se data já existir, retorna-se um ponteiro para ele.
- - lookup(key,data): Pesquisa se data com chave key está na tabela. Se estiver, retorna ponteiro para data, caso contrário retorne NULL.
- - destroy(): Remova a tabela hash da memória.
+ - Hash(m, hash): Cria uma tabela de tamanho m que usa a função hash
+ - insert(key): Insere data com chave key na tabela. A função deve retornar um ponteiro para o elemento inserido. Se já existir, retorna-se um ponteiro para ele.
+ - lookup(key): Pesquisa se data com chave key está na tabela. Se estiver, retorna ponteiro para ele, caso contrário retorne nullptr.
+ - ~Hash(): Remova a tabela hash da memória.
  - 
 2. Implemente as funções hash:
  - Divisão
  - Multiplicação 
+ - MyHash (pesquise por um terceira opção de função hash para implementar)
+Estas funções devem ser implementadas em [hash_function.h](hash/include/hash_function.h).
 
+3. Verifique se sua implementação passe nos testes básicos na pasta tests.
 
 ## Compilação e execução
 Configuraçao inicial:
@@ -39,6 +42,6 @@ Compilação e execução:
 ```
 cd build 
 make
-./tests/test_hash
+ctest
 ```
 

@@ -1,21 +1,19 @@
 
 cmake_minimum_required(VERSION 3.14)
-project(dcc012-lab4-heap)
+project(dcc012-hash-1)
 
-option(CLASSROOM "Enable classroom build" OFF)
-option(CPU_TIME  "Enable cputime build" ON)
+include_directories(${PROJECT_SOURCE_DIR}/hash/include)
 
-set(INPUT_DIR "${PROJECT_SOURCE_DIR}/input/")
-set(EXPECTED_OUTPUT_DIR "${PROJECT_SOURCE_DIR}/tests/expected_output/")
-
-configure_file(${PROJECT_SOURCE_DIR}/siga/config.h.in ${PROJECT_SOURCE_DIR}/siga/include/config.h) 
-include_directories(${PROJECT_SOURCE_DIR}/siga/include)
-
-
-add_subdirectory(siga)
+add_subdirectory(hash)
 
 enable_testing()
 add_subdirectory(tests)
+
+add_test(NAME test_list COMMAND test_list)
+add_test(NAME divisao COMMAND test_hash1)
+add_test(NAME multiplicacao COMMAND test_hash2)
+add_test(NAME my_hash COMMAND test_hash3)
+
 
 
 
