@@ -29,13 +29,15 @@ A implementação destas funções devem estar no arquivo [hash_function.h](hash
 
 3. Verifique se sua implementação passe nos testes básicos na pasta tests.
 
+4. Rodar o teste de desempenho [performance.cc](performance.cc)
+
 ## Compilação e execução
 Configuraçao inicial:
 
 ```
 cmake -B build 
 ```
-Compilação e execução:
+Compilação e execução dos testes:
 
 ```
 cd build 
@@ -43,3 +45,9 @@ make
 ctest
 ```
 
+Teste de Desempenho
+
+```
+./performance
+
+```
