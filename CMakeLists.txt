@@ -6,6 +6,11 @@ include_directories(${PROJECT_SOURCE_DIR}/hash/include)
 
 add_subdirectory(hash)
 
+
+add_executable(performance performance.cc)
+target_link_libraries(performance hash)
+
+
 enable_testing()
 add_subdirectory(tests)
 
