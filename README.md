@@ -24,7 +24,8 @@ Uma estrutura básica para a implementação da tabela hash já foi fornecida:
  - Divisão
  - Multiplicação 
  - MyHash (pesquise por um terceira opção de função hash para implementar)
-Estas funções devem ser implementadas em [hash_function.h](hash/include/hash_function.h).
+ 
+A implementação destas funções devem estar no arquivo [hash_function.h](hash/include/hash_function.h).
 
 3. Verifique se sua implementação passe nos testes básicos na pasta tests.
 
