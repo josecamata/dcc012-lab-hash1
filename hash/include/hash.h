@@ -22,8 +22,8 @@ class Hash
         ~Hash();
         int getCollisions();
     private:
-        HashFunction* _hash_fn;
-        std::vector<List> _hash_table;
+        HashFunction*       _hash_fn;
+        std::vector<List*> _hash_table;
         int _table_size;
         int _n_collisions;
 };
